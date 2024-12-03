@@ -1,0 +1,58 @@
+section {
+    height: 100vh; /* Cada sección ocupará el 100% de la altura de la ventana */
+    background-repeat: no-repeat;
+    background-size: cover; 
+    }
+    
+  .section1{
+    background-image: url("imagenes/fondos/fondo-01.svg");
+  }
+.section-carrusel-personajes{
+    background-image: url("imagenes/fondos/fondo-02.svg");
+    height: 100vh;
+    margin-top: -2px;
+  }
+.carousel {
+  width: 80%;
+  display: flex;
+  margin: auto;
+}
+.carousel-item {
+  display: none; /* Por defecto, oculta todos los elementos */
+  transition: transform 0.6s linear; /* Transición suave entre slides */
+  margin-top: 10%;
+}
+
+.carousel-item.active {
+  display: flex !important; /* Solo el slide activo es visible */
+  justify-content: center;  
+}
+  .personaje{
+    margin: 2%;
+    text-align: center;
+
+  }
+  .personaje img:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+  .personaje img{
+    filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.3) );  
+  }
+  .personaje p{
+    margin-top: 5%;
+    font-size: x-large;
+    margin-top: 10%;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    margin: 0 -3%;
+    background-color: #0b91af;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+
