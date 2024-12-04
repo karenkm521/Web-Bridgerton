@@ -42,7 +42,6 @@
   .navbar{
     border-top: 1px solid white;
     padding-left: 7%;
-    position: sticky;
   }
   .navbar a{
     color: white;
@@ -54,11 +53,36 @@
   section {     
       background-repeat: no-repeat;
       background-size: cover; 
-      }   
-.banner-inicio img{
-  box-shadow: inset 500px 500px 10px rgba(0, 0, 0, 0.5)  
+      }  
+.banner{
+  height: 602px;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+.banner-inicio{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
   
 }
+.banner-brid{
+  width: 100%;
+} 
+.text-banner{
+  position: absolute;
+  color: white;
+  width: 30%;
+  background-color: rgba(0, 0, 0, 0.466);
+  padding: 2%;
+  margin-right: 5%;
+  box-shadow: 10px 10px 50px rgb(14, 13, 13);
+  border-radius: 10%;
+  text-align: justify;
+
+
+}
+
   .section1{
       background-image: url("imagenes/fondos/fondo-01.svg");
     }
