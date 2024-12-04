@@ -1,36 +1,94 @@
-section {
-    height: 100vh; /* Cada sección ocupará el 100% de la altura de la ventana */
-    background-repeat: no-repeat;
-    background-size: cover; 
-    }
-    
+  *{
+    list-style: none;
+  }
+  header{
+    background: rgb(158,149,206);
+    background: radial-gradient(circle, rgba(158,149,206,1) 45%, rgba(129,118,186,1) 98%);
+    padding-top: 10px;
+  }
+  .banner-logo{
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    align-items: center;
+    margin: 0 5%;   
+  }
+  .redes-sociales{
+    width: 350px;
+    height: 40px;
+  }
+  .redes-sociales ul{
+    display: flex;
+  }
+  .redes-sociales li{
+    margin-left: 10%;
+  }
+  .redes-sociales a{
+    font-size: x-large;
+    color: white;
+  }
+  .redes-sociales a:hover{
+    color: #2b0e38;
+  }
+  .boton{
+    background-color: #7164b6;
+    border-color: white;
+    color:white;
+  }
+  .boton:hover{
+    background-color: #75488a;
+    border-color: #2b0e38;
+  }
+  .navbar{
+    border-top: 1px solid white;
+    padding-left: 7%;
+    position: sticky;
+  }
+  .navbar a{
+    color: white;
+    font-weight: 600;
+  }
+  .navbar a:hover{
+    color: #2b0e38;
+  }
+  section {     
+      background-repeat: no-repeat;
+      background-size: cover; 
+      }   
+.banner-inicio img{
+  box-shadow: inset 500px 500px 10px rgba(0, 0, 0, 0.5)  
+  
+}
   .section1{
-    background-image: url("imagenes/fondos/fondo-01.svg");
+      background-image: url("imagenes/fondos/fondo-01.svg");
+    }
+  .section-carrusel-personajes{
+      background-image: url("imagenes/fondos/fondo-02.svg");
+      height: 85vh;
+      margin-top: -2px;
+      text-align: center;
+    }
+  .section-carrusel-personajes h2{
+    font-size: 5vh;
+    padding-top: 10%;
   }
-.section-carrusel-personajes{
-    background-image: url("imagenes/fondos/fondo-02.svg");
-    height: 100vh;
-    margin-top: -2px;
+  .carousel {
+    width: 85%;
+    display: flex;
+    margin:  auto;
   }
-.carousel {
-  width: 80%;
-  display: flex;
-  margin: auto;
-}
-.carousel-item {
-  display: none; /* Por defecto, oculta todos los elementos */
-  transition: transform 0.6s linear; /* Transición suave entre slides */
-  margin-top: 10%;
-}
-
-.carousel-item.active {
-  display: flex !important; /* Solo el slide activo es visible */
-  justify-content: center;  
-}
+  .carousel-item {
+    display: none;
+    transition: transform 0.6s linear;
+    margin-top: 1%;
+  }
+  .carousel-item.active {
+    display: flex;  
+    justify-content: center;
+  }
   .personaje{
     margin: 2%;
     text-align: center;
-
   }
   .personaje img:hover{
     transform: scale(1.2);
@@ -46,7 +104,6 @@ section {
   }
   .carousel-control-prev,
   .carousel-control-next {
-    margin: 0 -3%;
     background-color: #0b91af;
     width: 6vh;
     height: 6vh;
