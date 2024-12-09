@@ -1,10 +1,21 @@
   *{
     list-style: none;
+    font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 550;
+  font-style: normal;
   }
   header{
     background: rgb(158,149,206);
     background: radial-gradient(circle, rgba(158,149,206,1) 45%, rgba(129,118,186,1) 98%);
     padding-top: 10px;
+    
+  }
+  h2{
+    font-family: "Aguafina Script", cursive;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 8vh;
+  
   }
   .banner-logo{
     display: flex;
@@ -39,62 +50,209 @@
     background-color: #75488a;
     border-color: #2b0e38;
   }
+/*navegador*/  
+
   .navbar{
     border-top: 1px solid white;
-    padding-left: 7%;
+    padding-left: 8%;
+  }
+  .navbar-nav{
+    gap: 25px;
   }
   .navbar a{
     color: white;
     font-weight: 600;
+    
   }
+  .dropdown-menu{
+    background-color: #4f388fa1;
+  }
+  
   .navbar a:hover{
     color: #2b0e38;
   }
+  
   section {     
       background-repeat: no-repeat;
       background-size: cover; 
+      background-position: center top; /* Centra horizontalmente y alinea al inicio verticalmente */ 
       }  
-.banner{
-  height: 602px;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
-}
+
+/*Seccion banner inicio*/
 .banner-inicio{
   display: flex;
-  align-items: center;
   justify-content: flex-end;
-  position: absolute;
+  position: relative;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
   
 }
 .banner-brid{
   width: 100%;
 } 
 .text-banner{
+  margin-top: 105px;
   position: absolute;
   color: white;
   width: 30%;
   background-color: rgba(0, 0, 0, 0.466);
   padding: 2%;
   margin-right: 5%;
-  box-shadow: 10px 10px 50px rgb(14, 13, 13);
+  box-shadow: 10px 10px 50px rgb(0, 0, 0);
   border-radius: 10%;
   text-align: justify;
-
+}
+/*Seccion Libros-Autora*/
+  .section-libros{
+      background-image: url("imagenes/fondos/fondo-02.svg");
+      background-position: center;
+      position: relative;
+      text-align: center;
+      padding-top: 9%;
+      display: flex;
+      flex-direction: column;
+    } 
+.section-libros h2{
+  margin: 1% 0;
+  color:#0e9cac ;
+  
+}
+.contenedor-libro-autora{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10%;
+}
+.libro{
+  display: flex;
+  align-items: center;
+  flex: 1;
+  width: 100%;
 
 }
+.carousel-libro{
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 
-  .section1{
-      background-image: url("imagenes/fondos/fondo-01.svg");
-    }
+}
+.carousel-libro div > .carousel-control-next,
+.carousel-libro div > .carousel-control-prev{
+background-color: #0e9cac;
+}
+
+
+/*tarjetas libro*/
+
+.contenedor-libro{
+  text-align: center;
+  
+  width: 350px;
+}
+.contenedor-libro h4{
+  font-size: x-large;
+  text-align: center;
+}
+.card-libro{
+  position: relative; 
+  margin-top: 30px;
+}
+
+.card-libro img{
+  width: 100%; 
+  height: 100%;
+}
+.card-libro:hover .card-hover{
+  opacity: 2;
+} 
+
+.card-hover{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.514);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition-duration: .5s;
+}
+.card-hover-header{
+  display: flex;
+  padding: 15px ;
+  flex-direction: column;
+  color: white;
+  margin-top: 20px;
+}
+.card-hover-header h5{
+  font-size:2rem;
+}
+.sipnosis{
+  text-align: justify;
+  margin: 15px 5%;
+  font-size: 1rem;
+}
+
+.card-hover-footer{
+  padding: 10px ;
+  display: flex;
+  justify-content: flex-end;
+  gap: 25px;
+  margin: 15px;
+}
+.card-hover-footer button{
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: small;
+  color: rgb(48, 44, 44);
+}
+.boton-amazon{
+  background-color: #ff9906;
+  
+
+}
+.boton-amazon:hover{
+  transform: scale(1.2);
+}
+.boton-mercado{
+  background-color: #fee400;
+ 
+}
+.boton-mercado:hover {
+  
+  transform: scale(1.2);
+}
+/*Tarjeta autora*/
+.contenedor-autora{
+  display: flex;
+  flex: 1;
+  
+}
+.autora{
+  width: 80%;
+  margin: auto;
+}
+.autora img{
+  width: 350px;
+}
+/*Seccion Carrusel*/
+
   .section-carrusel-personajes{
-      background-image: url("imagenes/fondos/fondo-02.svg");
+      background-image: url("imagenes/fondos/fondo-01.svg");
+      
       height: 85vh;
       margin-top: -2px;
       text-align: center;
     }
   .section-carrusel-personajes h2{
-    font-size: 5vh;
     padding-top: 10%;
+    color: #633564 ;
   }
   .carousel {
     width: 85%;
@@ -128,12 +286,10 @@
   }
   .carousel-control-prev,
   .carousel-control-next {
-    background-color: #0b91af;
+    background-color: #2b0e38;
     width: 6vh;
     height: 6vh;
     border-radius: 50%;
     top: 50%;
     transform: translateY(-50%);
   }
-
-

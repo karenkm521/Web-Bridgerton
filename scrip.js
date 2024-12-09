@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const originalHTML = document.querySelector(".carousel-inner").innerHTML;
+    const originalHTML = document.querySelector(".section-carrusel-personajes .carousel-inner").innerHTML;
 
     function restoreCarousel() {
         const isDesktop = window.matchMedia("(min-width: 1051px)").matches;
         const isTablet = window.matchMedia("(min-width: 768px) and (max-width: 1050px)").matches;
-        const carouselInner = document.querySelector(".carousel-inner");
+        const carouselInner = document.querySelector(".section-carrusel-personajes .carousel-inner");
 
         if (isDesktop) {
             // Si es escritorio, agrupa los personajes en 4
-            const personajes = Array.from(document.querySelectorAll(".personaje"));
+            const personajes = Array.from(document.querySelectorAll(".section-carrusel-personajes .personaje"));
             carouselInner.innerHTML = "";
 
             const firstGroup = personajes.splice(0, 4);
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         } else if (isTablet) {
             // Si es tablet, agrupa los personajes en 3
-            const personajes = Array.from(document.querySelectorAll(".personaje"));
+            const personajes = Array.from(document.querySelectorAll(".section-carrusel-personajes .personaje"));
             carouselInner.innerHTML = "";
 
             const firstGroup = personajes.splice(0, 3);
