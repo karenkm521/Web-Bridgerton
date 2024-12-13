@@ -4,42 +4,35 @@
   font-weight: 550;
   font-style: normal;
   }
-  header{
-    background: rgb(158,149,206);
-    background: radial-gradient(circle, rgba(158,149,206,1) 45%, rgba(129,118,186,1) 98%);
-    padding-top: 10px;
-    
-  }
   h2{
     font-family: "Aguafina Script", cursive;
   font-weight: 500;
   font-style: normal;
   font-size: 8vh;
-  
+  }
+  section {     
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center top; /* Centra horizontalmente y alinea al inicio verticalmente */ 
+    }  
+  /*header*/
+  header{
+    background: rgb(158,149,206);
+    background: radial-gradient(circle, rgba(158,149,206,1) 45%, rgba(129,118,186,1) 98%);
+    padding-top: 10px;
   }
   .banner-logo{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     height: 90px;
-    align-items: center;
-    margin: 0 5%;   
+    align-items: center;   
   }
-  .redes-sociales{
-    width: 350px;
-    height: 40px;
+  .logo{
+    position: absolute;
   }
-  .redes-sociales ul{
-    display: flex;
-  }
-  .redes-sociales li{
-    margin-left: 10%;
-  }
-  .redes-sociales a{
-    font-size: x-large;
-    color: white;
-  }
-  .redes-sociales a:hover{
-    color: #2b0e38;
+  .form-inline {
+    position: absolute;
+    right: 50px; 
   }
   .boton{
     background-color: #7164b6;
@@ -51,7 +44,6 @@
     border-color: #2b0e38;
   }
 /*navegador*/  
-
   .navbar{
     border-top: 1px solid white;
     padding-left: 8%;
@@ -62,7 +54,6 @@
   .navbar a{
     color: white;
     font-weight: 600;
-    
   }
   .dropdown-menu{
     background-color: #4f388fa1;
@@ -72,36 +63,31 @@
     color: #2b0e38;
   }
   
-  section {     
-      background-repeat: no-repeat;
-      background-size: cover; 
-      background-position: center top; /* Centra horizontalmente y alinea al inicio verticalmente */ 
-      }  
-
+ 
 /*Seccion banner inicio*/
-.banner-inicio{
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
-  
-}
-.banner-brid{
-  width: 100%;
-} 
-.text-banner{
-  margin-top: 105px;
-  position: absolute;
-  color: white;
-  width: 30%;
-  background-color: rgba(0, 0, 0, 0.466);
-  padding: 2%;
-  margin-right: 5%;
-  box-shadow: 10px 10px 50px rgb(0, 0, 0);
-  border-radius: 10%;
-  text-align: justify;
-}
+  .banner-inicio{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    
+  }
+  .banner-brid{
+    width: 100%;
+  } 
+  .text-banner{
+    margin-top: 105px;
+    position: absolute;
+    color: white;
+    width: 30%;
+    background-color: rgba(0, 0, 0, 0.466);
+    padding: 2%;
+    margin-right: 5%;
+    box-shadow: 10px 10px 50px rgb(0, 0, 0);
+    border-radius: 10%;
+    text-align: justify;
+  }
 /*Seccion Libros-Autora*/
   .section-libros{
       background-image: url("imagenes/fondos/fondo-02.svg");
@@ -150,7 +136,6 @@
 .carousel-libro div > .carousel-control-prev{
 background-color: #0e9cac;
 }
-
 
 /*tarjetas libro*/
 
@@ -253,7 +238,6 @@ background-color: #0e9cac;
 
 .autora img{
   width: 350px;
-  border-radius: 50%;
   object-fit: cover;
   margin: 5% 0 7% 0;
 }
@@ -273,8 +257,6 @@ background-color: #0e9cac;
       margin-top: -2px;
       text-align: center;
       padding-bottom: 5%;
-      position: relative;
-      
     }
   .section-carrusel-personajes h2{
     padding-top: 10%;
@@ -322,12 +304,16 @@ background-color: #0e9cac;
 /*Seccion Noticias*/
 .seccion-noticias{
   background-image: url(imagenes/fondos/fondo-03.svg);
+  background-size:  100% auto;
+  margin-top: -2px;
+  background-color: #f3ccda;
   position: relative;
   display: flex;
   text-align: center;
   flex-direction: column;
   padding-top: 12%;
   align-items: center;
+  position: relative;
 }
 .seccion-noticias h2{
   color: #e07ca0;
@@ -372,39 +358,36 @@ background-color: #0e9cac;
   color: rgb(248, 225, 225);
   font-weight: 300;
 }
-.news-grid {
-  
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
+/*Footer*/
+footer{
+  background-color: #7164b6;
+  display: flex;
+  justify-content: center;
 }
-
-.news-item {
-  display: grid;
-  grid-template-rows: auto auto auto;
-  background: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.contenedor-footer{
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  margin: 3%;
 }
-
-.news-item img {
-  width: 100%;
-  height: auto;
-  cursor: pointer;
+.contenedor-footer p{
+  font-size: larger;
+  color: white;
 }
-
-.news-item h3 {
-  margin: 10px;
-  font-size: 1.2rem;
-  color: #333;
+.redes-sociales{
+  width: 350px;
+  height: 40px;
 }
-
-.news-item p {
-  margin: 10px;
-  color: #555;
-  font-size: 1rem;
-  line-height: 1.4;
+.redes-sociales ul{
+  display: flex;
+}
+.redes-sociales li{
+  margin-left: 10%;
+}
+.redes-sociales a{
+  font-size: x-large;
+  color: white;
+}
+.redes-sociales a:hover{
+  color: #2b0e38;
 }
